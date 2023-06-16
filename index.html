@@ -1,0 +1,232 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="samlogoS.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+    <title>Sam Official</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(45deg, rgb(1, 1, 100), #14181b, #300269);
+            background-size: 180% 180%;
+            animation: animonential 3s linear infinite alternate-reverse;
+        }
+
+        @keyframes animonential {
+            0% {
+                background-position: 100% 20%;
+            }
+
+            100% {
+                background-position: 0% 100%;
+            }
+        }
+
+        .main_wrapper {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .loader_wrapper {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: green;
+        }
+
+        h2 {
+            position: relative;
+            font-size: 6rem;
+            color: transparent;
+            text-align: center;
+            -webkit-text-stroke: 1px #656772;
+            text-transform: uppercase;
+            font-family: 'Bungee', cursive;
+            margin-bottom: 72px;
+        }
+
+        h2::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #000;
+            -webkit-text-stroke: 1px royalblue;
+            border-right: 3px solid cyan;
+            overflow: hidden;
+            animation: animate 3.6s linear infinite;
+        }
+
+        @keyframes animate {
+
+            0%,
+            10%,
+            100% {
+                width: 0;
+            }
+
+            70%,
+            90% {
+                width: 100%;
+            }
+        }
+
+        .minebox_grid {
+            width: 100%;
+            max-width: 80%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .minebox_wrapper {
+            height: 70px;
+            width: 100%;
+            border-radius: 6px;
+            color: white;
+            background: url("cartographer.png"), rgba(0, 0, 0, 1);
+            background-blend-mode: luminosity;
+            border: 2px solid rgb(2, 2, 161);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            line-height: 24px;
+            font-family: 'Bruno Ace SC', cursive;
+            cursor: pointer;
+        }
+
+        @media (max-width: 767px) {
+            h2 {
+                font-size: 3rem;
+                margin-bottom: 12px;
+            }
+
+            .minebox_grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .minebox_wrapper {
+                font-size: 14px;
+            }
+        }
+
+        @media (min-width: 992px) and (max-width: 1280px) {
+            h2 {
+                font-size: 4rem;
+                margin-bottom: 24px;
+            }
+
+            .minebox_grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .minebox_wrapper {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <div class="main_wrapper">
+        <div className="loader_wrapper">
+            <h2 data-text="SamChrome">SamChrome</h2>
+        </div>
+        <div class="minebox_grid">
+            <div class="minebox_wrapper" onclick="mygoogle()">
+                <p>GOOGLE</p>
+            </div>
+            <div class="minebox_wrapper" onclick="mysamzenic()">
+                <p>SAMZENIC</p>
+            </div>
+            <div class="minebox_wrapper" onclick="myicons()">
+                <p>REACT ICONS</p>
+            </div>
+            <div class="minebox_wrapper" onclick="mylinkedin()">
+                <p>LINKEDIN EST</p>
+            </div>
+            <div class="minebox_wrapper" onclick="myyoutube()">
+                <p>YOUTUBE</p>
+            </div>
+            <div class="minebox_wrapper" onclick="mymaterial()">
+                <p>MATERIAL UI</p>
+            </div>
+            <div class="minebox_wrapper" onclick="mypattern()">
+                <p>PATTERNS</p>
+            </div>
+            <div class="minebox_wrapper" onclick="myfonts()">
+                <p>GOOGLE FONTS</p>
+            </div>
+            <div class="minebox_wrapper" onclick="mypalette()">
+                <p>Coolors</p>
+            </div>
+            <div class="minebox_wrapper" onclick="mypexels()">
+                <p>Pexels</p>
+            </div>
+            <div class="minebox_wrapper" onclick="mygitlab()">
+                <p>GitLab Rejoice</p>
+            </div>
+            <div class="minebox_wrapper" onclick="mychatgpt()">
+                <p>Chat Gpt</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function mygoogle() {
+        window.open("https://www.google.com/")
+    }
+    function mysamzenic() {
+        window.open("http://127.0.0.1:5173/")
+    }
+    function myicons() {
+        window.open("https://react-icons.github.io/react-icons/icons?name=fa")
+    }
+    function mylinkedin() {
+        window.open("https://docs.google.com/spreadsheets/d/1qC3CMwzZjsEFXH4EpfJ6S_2JvZ46LxQN3JL0xHbDy0w/edit#gid=0")
+    }
+    function myyoutube() {
+        window.open("https://www.youtube.com/")
+    }
+    function mymaterial() {
+        window.open("https://mui.com/material-ui/react-autocomplete/")
+    }
+    function mypattern() {
+        window.open("https://www.transparenttextures.com/")
+    }
+    function myfonts() {
+        window.open("https://fonts.google.com/?preview.text=GOOGLE&preview.text_type=custom")
+    }
+    function mypalette() {
+        window.open("https://coolors.co/palettes/trending")
+    }
+    function mypexels() {
+        window.open("https://www.pexels.com/")
+    }
+    function mychatgpt() {
+        window.open("https://chat.openai.com/")
+    }
+</script>
+
+</html>
